@@ -1,2 +1,0 @@
-# carecryptAIMVP
-Healthtech Startup
