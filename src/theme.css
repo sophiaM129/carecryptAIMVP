@@ -1,0 +1,74 @@
+/* CareCrypt AI — shared design tokens, ported from the prototype UI kit.
+   Referenced by page/component CSS as pages get ported. */
+:root {
+  --cc-bg: #060504;
+  --cc-surface: rgba(9, 7, 5, 0.88);
+  --cc-text: #f5ede0;
+  --cc-text-dim: rgba(245, 237, 224, 0.65);
+  --cc-text-faint: rgba(245, 237, 224, 0.45);
+  --cc-accent: #c8f135;
+  --cc-gold: #e6b84a;
+  --cc-danger: #f43f5e;
+  --cc-border: rgba(245, 237, 224, 0.08);
+  --cc-font-display: 'Poppins', sans-serif;
+  --cc-font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Shared page-header pattern, used identically across Insurance, Medical History,
+   Timeline, and Profile in the prototype. */
+.cc-page-header {
+  padding: 36px 72px 28px;
+  border-bottom: 1px solid var(--cc-border);
+}
+
+.cc-page-eyebrow {
+  font-family: var(--cc-font-display);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cc-accent);
+  margin-bottom: 8px;
+}
+
+.cc-page-title {
+  font-family: var(--cc-font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: var(--cc-text);
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.cc-page-sub {
+  font-family: var(--cc-font-display);
+  font-size: 0.9rem;
+  color: var(--cc-text-faint);
+}
+
+.cc-field-input,
+.cc-field-select {
+  width: 100%;
+  padding: 10px 13px;
+  background: rgba(6, 5, 4, 0.8);
+  border: 1.5px solid rgba(245, 237, 224, 0.1);
+  border-radius: 8px;
+  font-size: 0.88rem;
+  color: var(--cc-text);
+  font-family: var(--cc-font-display);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.cc-field-select {
+  appearance: none;
+}
+
+.cc-field-label {
+  font-family: var(--cc-font-display);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--cc-text-dim);
+  display: block;
+  margin-bottom: 5px;
+}

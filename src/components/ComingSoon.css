@@ -1,0 +1,47 @@
+@import '../theme.css';
+
+.coming-soon-page {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.coming-soon-card {
+  text-align: center;
+  max-width: 420px;
+}
+
+.coming-soon-eyebrow {
+  font-family: var(--cc-font-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cc-accent);
+  margin-bottom: 10px;
+}
+
+.coming-soon-title {
+  font-family: var(--cc-font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--cc-text);
+  margin-bottom: 10px;
+}
+
+.coming-soon-body {
+  font-family: var(--cc-font-display);
+  font-size: 0.9rem;
+  color: rgba(245, 237, 224, 0.5);
+  margin-bottom: 20px;
+}
+
+.coming-soon-link {
+  font-family: var(--cc-font-display);
+  color: var(--cc-accent);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+}

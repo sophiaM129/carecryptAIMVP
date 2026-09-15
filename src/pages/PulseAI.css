@@ -1,0 +1,312 @@
+@import '../theme.css';
+
+.pulse-page {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  flex-direction: column;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 28px 24px 24px;
+}
+
+.pulse-header {
+  margin-bottom: 20px;
+}
+
+.pulse-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.pulse-title {
+  font-family: var(--cc-font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f0f5ff;
+}
+
+.pulse-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(124, 110, 255, 0.12);
+  border: 1px solid rgba(124, 110, 255, 0.3);
+  border-radius: 9999px;
+  padding: 3px 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #7c6eff;
+  font-family: var(--cc-font-display);
+}
+
+.pulse-badge.offline {
+  background: rgba(245, 237, 224, 0.08);
+  border-color: rgba(245, 237, 224, 0.15);
+  color: rgba(245, 237, 224, 0.5);
+}
+
+.pulse-sub {
+  font-family: var(--cc-font-display);
+  font-size: 0.85rem;
+  color: rgba(240, 245, 255, 0.4);
+}
+
+.pulse-chat-wrap {
+  flex: 1;
+  background: rgba(7, 16, 31, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 440px;
+}
+
+.pulse-chat-area {
+  flex: 1;
+  padding: 24px 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  max-height: 55vh;
+}
+
+.pulse-empty-state {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.pulse-orb {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--cc-accent), var(--cc-gold));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 0 32px rgba(0, 194, 224, 0.3);
+}
+
+.pulse-empty-title {
+  font-family: var(--cc-font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--cc-text);
+}
+
+.pulse-empty-desc {
+  font-family: var(--cc-font-display);
+  font-size: 0.88rem;
+  color: rgba(245, 237, 224, 0.45);
+  max-width: 360px;
+  line-height: 1.6;
+}
+
+.pulse-quick-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.pulse-quick-btn {
+  font-family: var(--cc-font-display);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(240, 245, 255, 0.75);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 11px 16px;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.15s;
+}
+
+.pulse-quick-btn:hover {
+  background: rgba(0, 194, 224, 0.08);
+  border-color: rgba(0, 194, 224, 0.25);
+  color: #f0f5ff;
+}
+
+.pulse-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.pulse-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--cc-accent), var(--cc-gold));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #050a18;
+  flex-shrink: 0;
+}
+
+.pulse-bubble-ai {
+  background: rgba(200, 241, 53, 0.07);
+  border: 1px solid rgba(200, 241, 53, 0.12);
+  border-radius: 4px 14px 14px 14px;
+  padding: 11px 15px;
+  font-family: var(--cc-font-display);
+  font-size: 0.9rem;
+  color: rgba(240, 245, 255, 0.88);
+  line-height: 1.65;
+  max-width: 82%;
+  white-space: pre-wrap;
+}
+
+.pulse-row-user {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pulse-bubble-user {
+  background: rgba(124, 110, 255, 0.14);
+  border: 1px solid rgba(124, 110, 255, 0.22);
+  border-radius: 14px 4px 14px 14px;
+  padding: 11px 15px;
+  font-family: var(--cc-font-display);
+  font-size: 0.9rem;
+  color: rgba(240, 245, 255, 0.88);
+  line-height: 1.65;
+  max-width: 75%;
+}
+
+.pulse-bubble-error {
+  background: rgba(244, 63, 94, 0.08);
+  border: 1px solid rgba(244, 63, 94, 0.2);
+  color: #f5c1cb;
+}
+
+.pulse-typing-dots {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding: 6px 2px;
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00c2e0;
+  opacity: 0.7;
+  animation: pulse-bounce 1.2s infinite;
+}
+
+.pulse-dot:nth-child(2) { animation-delay: 0.15s; }
+.pulse-dot:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes pulse-bounce {
+  0%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-6px); }
+}
+
+.pulse-input-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 14px 16px;
+  display: flex;
+  gap: 10px;
+  background: rgba(5, 10, 24, 0.5);
+}
+
+.pulse-chat-input {
+  flex: 1;
+  padding: 11px 16px;
+  background: rgba(11, 21, 40, 0.8);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #f0f5ff;
+  font-family: var(--cc-font-display);
+  outline: none;
+  resize: none;
+}
+
+.pulse-chat-input:focus {
+  border-color: rgba(0, 194, 224, 0.4);
+}
+
+.pulse-send-btn {
+  font-family: var(--cc-font-display);
+  background: #00c2e0;
+  color: #050a18;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 11px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.pulse-send-btn:disabled {
+  background: rgba(0, 194, 224, 0.4);
+  cursor: not-allowed;
+}
+
+.pulse-disclaimer {
+  font-family: var(--cc-font-display);
+  font-size: 0.72rem;
+  color: rgba(245, 237, 224, 0.3);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.pulse-config-notice {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.pulse-config-title {
+  font-family: var(--cc-font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--cc-text);
+}
+
+.pulse-config-body {
+  font-family: var(--cc-font-display);
+  font-size: 0.85rem;
+  color: rgba(245, 237, 224, 0.5);
+  max-width: 420px;
+  line-height: 1.6;
+}
+
+.pulse-config-code {
+  font-family: var(--cc-font-mono);
+  font-size: 0.78rem;
+  background: rgba(6, 5, 4, 0.8);
+  border: 1px solid rgba(245, 237, 224, 0.12);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: var(--cc-accent);
+}

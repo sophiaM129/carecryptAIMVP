@@ -1,0 +1,327 @@
+@import '../theme.css';
+
+.medical-history-page {
+  min-height: calc(100vh - 72px);
+  padding-bottom: 60px;
+}
+
+.mh-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.mh-success-banner {
+  background: rgba(200, 241, 53, 0.1);
+  border: 1px solid rgba(200, 241, 53, 0.3);
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-family: var(--cc-font-display);
+  font-size: 0.88rem;
+  color: var(--cc-accent);
+  margin-bottom: 20px;
+}
+
+.mh-tabs {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 32px;
+  background: rgba(16, 13, 9, 0.6);
+  border-radius: 12px;
+  padding: 4px;
+  border: 1px solid rgba(245, 237, 224, 0.07);
+}
+
+.mh-tab {
+  flex: 1;
+  padding: 8px 4px;
+  border-radius: 9px;
+  border: none;
+  font-family: var(--cc-font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s;
+  text-align: center;
+  background: transparent;
+  color: rgba(245, 237, 224, 0.45);
+}
+
+.mh-tab.active {
+  background: var(--cc-accent);
+  color: var(--cc-bg);
+}
+
+.mh-card {
+  background: rgba(16, 13, 9, 0.7);
+  border: 1px solid rgba(245, 237, 224, 0.08);
+  border-radius: 16px;
+  padding: 32px 28px;
+}
+
+.mh-section-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(245, 237, 224, 0.07);
+}
+
+.mh-section-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: rgba(200, 241, 53, 0.1);
+  border: 1px solid rgba(200, 241, 53, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.mh-icon-amber {
+  background: rgba(230, 184, 74, 0.1);
+  border-color: rgba(230, 184, 74, 0.2);
+}
+
+.mh-icon-orange {
+  background: rgba(255, 124, 69, 0.1);
+  border-color: rgba(255, 124, 69, 0.2);
+}
+
+.mh-section-title {
+  font-family: var(--cc-font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--cc-text);
+}
+
+.mh-grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.mh-grid3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.mh-grid3.mh-grid4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.mh-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mh-input-with-unit {
+  display: flex;
+  gap: 6px;
+}
+
+.mh-input-with-unit input {
+  flex: 1;
+}
+
+.mh-unit-select {
+  width: 74px;
+  flex-shrink: 0;
+}
+
+.mh-check-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.mh-check-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--cc-font-display);
+  font-size: 0.8rem;
+  color: rgba(245, 237, 224, 0.7);
+  cursor: pointer;
+}
+
+.mh-checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1.5px solid rgba(245, 237, 224, 0.2);
+  background: rgba(6, 5, 4, 0.8);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.mh-checkbox.checked {
+  background: var(--cc-accent);
+  border-color: var(--cc-accent);
+}
+
+.mh-med-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 10px;
+  padding: 14px;
+  background: rgba(6, 5, 4, 0.5);
+  border-radius: 10px;
+  border: 1px solid rgba(245, 237, 224, 0.07);
+  align-items: end;
+}
+
+.mh-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.mh-toggle-btn {
+  width: 40px;
+  height: 22px;
+  border-radius: 11px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s;
+  background: rgba(245, 237, 224, 0.1);
+  flex-shrink: 0;
+}
+
+.mh-toggle-btn::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--cc-text);
+  transition: all 0.2s;
+}
+
+.mh-toggle-btn.active {
+  background: var(--cc-accent);
+}
+
+.mh-toggle-btn.active::after {
+  left: 20px;
+  background: var(--cc-bg);
+}
+
+.mh-toggle-label {
+  font-family: var(--cc-font-display);
+  font-size: 0.82rem;
+  color: rgba(245, 237, 224, 0.6);
+}
+
+.mh-nested {
+  margin: -6px 0 20px 0;
+  padding: 14px 16px;
+  background: rgba(6, 5, 4, 0.4);
+  border-radius: 10px;
+  border: 1px solid rgba(245, 237, 224, 0.06);
+}
+
+.mh-radio-group {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+.mh-radio-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--cc-font-display);
+  font-size: 0.85rem;
+  color: rgba(245, 237, 224, 0.7);
+  cursor: pointer;
+}
+
+.mh-radio-item input {
+  accent-color: var(--cc-accent);
+}
+
+.mh-remove-btn {
+  font-family: var(--cc-font-display);
+  background: transparent;
+  border: 1px solid rgba(244, 63, 94, 0.35);
+  color: #f5c1cb;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  height: fit-content;
+}
+
+.mh-add-btn {
+  font-family: var(--cc-font-display);
+  background: rgba(245, 237, 224, 0.06);
+  color: rgba(245, 237, 224, 0.65);
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 7px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(245, 237, 224, 0.12);
+  cursor: pointer;
+}
+
+.mh-nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+}
+
+.mh-btn-prev {
+  font-family: var(--cc-font-display);
+  background: rgba(245, 237, 224, 0.06);
+  color: rgba(245, 237, 224, 0.65);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: 1px solid rgba(245, 237, 224, 0.12);
+  cursor: pointer;
+}
+
+.mh-btn-next,
+.mh-btn-save {
+  font-family: var(--cc-font-display);
+  background: var(--cc-accent);
+  color: var(--cc-bg);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.mh-btn-save {
+  padding: 10px 28px;
+}
+
+@media (max-width: 700px) {
+  .mh-grid2, .mh-grid3, .mh-check-grid, .mh-med-row {
+    grid-template-columns: 1fr;
+  }
+  .mh-tabs {
+    flex-wrap: wrap;
+  }
+  .mh-tab {
+    flex: 1 1 30%;
+  }
+}

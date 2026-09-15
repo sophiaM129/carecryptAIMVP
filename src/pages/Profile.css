@@ -1,0 +1,302 @@
+@import '../theme.css';
+
+.profile-page {
+  min-height: calc(100vh - 72px);
+  padding-bottom: 60px;
+}
+
+.profile-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 28px 24px;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.profile-card {
+  background: rgba(16, 13, 9, 0.8);
+  border: 1px solid rgba(245, 237, 224, 0.08);
+  border-radius: 18px;
+  padding: 28px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.avatar-hover-wrap {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 14px;
+  cursor: pointer;
+}
+
+.avatar-ring {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--cc-accent), var(--cc-gold));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--cc-bg);
+  font-family: var(--cc-font-display);
+}
+
+.avatar-qr-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  background: rgba(16, 13, 9, 0.97);
+  border: 1px solid rgba(200, 241, 53, 0.35);
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8), 0 0 24px rgba(200, 241, 53, 0.15);
+  width: 180px;
+}
+
+.avatar-qr-popup-title {
+  font-family: var(--cc-font-display);
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--cc-accent);
+  text-align: center;
+  margin-bottom: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.avatar-qr-popup-canvas {
+  background: white;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.avatar-qr-popup-caption {
+  font-family: var(--cc-font-mono);
+  font-size: 0.6rem;
+  color: rgba(245, 237, 224, 0.4);
+  text-align: center;
+  margin-top: 6px;
+}
+
+.profile-name {
+  font-family: var(--cc-font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--cc-text);
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+
+.profile-abha {
+  font-family: var(--cc-font-mono);
+  font-size: 0.7rem;
+  color: rgba(245, 237, 224, 0.4);
+  margin-bottom: 14px;
+}
+
+.profile-quick-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.qstat {
+  background: rgba(6, 5, 4, 0.6);
+  border-radius: 10px;
+  padding: 10px 6px;
+  text-align: center;
+}
+
+.qstat-val {
+  font-family: var(--cc-font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--cc-text);
+  letter-spacing: -0.02em;
+}
+
+.qstat-label {
+  font-family: var(--cc-font-display);
+  font-size: 0.62rem;
+  color: rgba(245, 237, 224, 0.38);
+  margin-top: 2px;
+}
+
+.profile-edit-btn {
+  display: block;
+  font-family: var(--cc-font-display);
+  background: rgba(200, 241, 53, 0.1);
+  color: var(--cc-accent);
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 9px;
+  border-radius: 8px;
+  border: 1px solid rgba(200, 241, 53, 0.25);
+  cursor: pointer;
+  width: 100%;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.profile-empty-note {
+  font-family: var(--cc-font-display);
+  font-size: 0.78rem;
+  color: rgba(245, 237, 224, 0.4);
+  line-height: 1.5;
+  padding: 14px 16px;
+  background: rgba(230, 184, 74, 0.06);
+  border: 1px solid rgba(230, 184, 74, 0.15);
+  border-radius: 10px;
+}
+
+.profile-section {
+  background: rgba(16, 13, 9, 0.75);
+  border: 1px solid rgba(245, 237, 224, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+.profile-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(245, 237, 224, 0.07);
+}
+
+.profile-section-title {
+  font-family: var(--cc-font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--cc-text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-edit-sm-btn {
+  font-family: var(--cc-font-display);
+  background: transparent;
+  color: rgba(245, 237, 224, 0.4);
+  font-weight: 600;
+  font-size: 0.72rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(245, 237, 224, 0.1);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.profile-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.profile-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.profile-info-label {
+  font-family: var(--cc-font-display);
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(245, 237, 224, 0.32);
+}
+
+.profile-info-val {
+  font-family: var(--cc-font-display);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--cc-text);
+}
+
+/* Full-screen scannable QR modal (click-to-expand, per your request) */
+.qr-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.qr-modal-card {
+  background: rgba(16, 13, 9, 0.97);
+  border: 1px solid rgba(245, 237, 224, 0.12);
+  border-radius: 20px;
+  padding: 32px;
+  text-align: center;
+  max-width: 360px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+}
+
+.qr-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(245, 237, 224, 0.08);
+  border: none;
+  color: var(--cc-text);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.qr-modal-title {
+  font-family: var(--cc-font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--cc-text);
+  margin-bottom: 6px;
+}
+
+.qr-modal-sub {
+  font-family: var(--cc-font-display);
+  font-size: 0.78rem;
+  color: rgba(245, 237, 224, 0.45);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.qr-modal-canvas {
+  background: white;
+  border-radius: 14px;
+  padding: 16px;
+  display: inline-block;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  margin-bottom: 14px;
+}
+
+.qr-modal-caption {
+  font-family: var(--cc-font-display);
+  font-size: 0.75rem;
+  color: rgba(245, 237, 224, 0.4);
+}
+
+@media (max-width: 760px) {
+  .profile-wrap {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,121 @@
+@import '../theme.css';
+
+.timeline-page {
+  min-height: calc(100vh - 72px);
+  padding-bottom: 60px;
+}
+
+.tl-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 28px 24px;
+}
+
+.tl-filter-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.tl-filter-btn {
+  font-family: var(--cc-font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1px solid;
+  cursor: pointer;
+  transition: all 0.15s;
+  background: transparent;
+}
+
+.tl-timeline {
+  position: relative;
+  padding-left: 32px;
+}
+
+.tl-line {
+  position: absolute;
+  left: 11px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(245, 237, 224, 0.07);
+  border-radius: 2px;
+}
+
+.tl-event-wrap {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.tl-dot {
+  position: absolute;
+  left: -32px;
+  top: 18px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.tl-card {
+  background: rgba(16, 13, 9, 0.75);
+  border: 1px solid rgba(245, 237, 224, 0.08);
+  border-radius: 14px;
+  padding: 18px 20px;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+
+.tl-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 6px;
+}
+
+.tl-date-str {
+  font-family: var(--cc-font-mono);
+  font-size: 0.72rem;
+  color: rgba(245, 237, 224, 0.35);
+}
+
+.tl-cat-tag {
+  font-family: var(--cc-font-display);
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  border: 1px solid;
+}
+
+.tl-event-title {
+  font-family: var(--cc-font-display);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--cc-text);
+  margin-bottom: 4px;
+}
+
+.tl-event-meta {
+  font-family: var(--cc-font-display);
+  font-size: 0.76rem;
+  color: rgba(245, 237, 224, 0.45);
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tl-detail {
+  font-family: var(--cc-font-display);
+  font-size: 0.8rem;
+  color: rgba(245, 237, 224, 0.6);
+  line-height: 1.6;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(245, 237, 224, 0.07);
+}
